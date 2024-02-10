@@ -53,11 +53,10 @@ for root, dirs, files in os.walk(dirname):
             shutil.rmtree(path)
 
 
+logging.info(f"{convert_unit_sizes(totalsize)} of total memory saved")
 # creates log session separator
 logger = logging.getLogger()
 formatter = CustomLogFormatter()
 for handler in logger.handlers:
     handler.setFormatter(formatter)
-
-
 logging.info(f"───────────────────────────────────────────────────────────────")
